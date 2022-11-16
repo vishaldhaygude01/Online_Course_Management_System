@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+
+<html>
+    <style>
+        .navbar{
+            background-color:#25282c ;
+            {{!-- border-radius: 36px; --}}
+        }
+
+        .navbar ul{     /*we use because float overflow*/
+            overflow: auto;
+        }
+
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 13px 20px;
+            
+        }
+
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+            /* background-color: black; */
+            
+            
+        }
+         
+        .navbar li a:hover{
+            
+            background-color: #5E6063;
+            color: black;
+            
+        }
+        .navbar input{
+            border:  2px solid black;
+            padding : 3px 17px;
+            width: 129px;
+        }
+
+        .hey{
+
+            margin-top: -14px;
+            margin-bottom: -1rem;
+           
+            
+        }
+
+
+    </style>
+<head>
+        <header>
+        <nav class="navbar">
+            <ul class="hey">
+                <li> <a href="http://localhost:3001/learner/list">Learner</a> </li>
+                <li> <a href="http://localhost:3002/course/list1" >Courses</a></li>
+                <li> <a href="http://localhost:3003/instructor/list2" >Instructor</a> </li>
+                {{!-- <li> <div class="search">
+                    <input type = "name" name = "search" id="search" placeholder="search">
+                </div></li> --}}
+            </ul>
+
+            
+        </nav>
+    </header>
+    </div>
+  <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <title>Online Course management system</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-info">
+    <div style="background-color: rgb(127, 212, 218)" class="text-center margin-top: 25px;padding:20px;" >
+        <h2>Online Course management system</h2 >
+    </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2 border-dark bo " style="background-color: #a4c1e2;margin-top: 25px;padding:15px; ">
+            {{{body}}}
+        </div>
+    </div>
+
+</body>
+
+</html>

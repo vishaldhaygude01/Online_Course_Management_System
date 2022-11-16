@@ -1,0 +1,62 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/course" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{course._id}}">
+    {{!-- <h3>Insert Course Details</h3> --}}
+    
+    <div class="form-group">
+        <label>Course Name</label>
+        <input type="text"  class="form-control" name="courseName" placeholder="e.g. App Development" value="{{course.courseName}}">
+        <div class="text-danger">
+            {{course.courseNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Language</label>
+    <select  type="text" class="form-control" name="language" placeholder="Language" value="{{course.language}}">
+    <option value=""></option>
+    <option value="English">English</option>
+    <option value="Hindi">Hindi</option>
+    <option value="Spanish">Spanish</option>
+    <option value="French">French</option>
+  </select>
+        <div class="text-danger">
+            {{course.languageError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Ratings</label>
+    <select class="form-control" name="ratings" placeholder="Ratings" value="{{course.ratings}}">
+     <option value=""></option>   
+    <option value="5 Star">⭐⭐⭐⭐⭐</option>
+    <option value="4 Star">⭐⭐⭐⭐</option>
+    <option value="3 Star">⭐⭐⭐</option>
+    <option value="2 Star">⭐⭐</option>
+    <option value="1 Star">⭐</option>
+  </select>
+  
+            <div class="text-danger">
+            {{course.ratingsError}}</div>
+        </div>
+        
+        <div class="form-group col-md-6">
+            <label>Fees</label>
+            <input type="number" class="form-control" name="fees" placeholder="Fees" value="{{course.fees}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Duration in Months</label>
+            <input type="number" class="form-control" name="duration" placeholder="Duration" value="{{course.duration}}">
+
+        </div>
+        
+    </div>
+    <div class="form-group">
+        <label>Instructor Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="e.g. James Alexander Thomas" value="{{instructor.fullName}}">
+        <div class="text-danger">
+            {{course.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/course/list1"><i class="fa fa-list-alt"></i> Display Data</a>
+    </div>
+</form>

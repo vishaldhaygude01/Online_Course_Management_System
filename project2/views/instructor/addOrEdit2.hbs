@@ -1,0 +1,40 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/instructor" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{instructor._id}}">
+    {{!-- <h3>Insert instructor Details</h3> --}}
+    
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="e.g. James Alexander Thomas" value="{{instructor.fullName}}">
+        <div class="text-danger">
+            {{instructor.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="e.g. james123@gmail.com" value="{{instructor.email}}">
+        <div class="text-danger">
+            {{instructor.emailError}}</div>
+    </div>
+    
+        <div class="form-group ">
+            <label>Mobile</label>
+            <input type="text" class="form-control" name="mobile" placeholder="Mobile" value="{{instructor.mobile}}">
+            <div class="text-danger">
+            {{instructor.mobileError}}</div>
+        </div>
+        <div class="form-group">
+            <label>Qualification</label>
+            <input type="text" class="form-control" name="qualification" placeholder="Qualification" value="{{instructor.qualification}}">
+        </div>
+        <div class="form-group">
+        <label>Course Name</label>
+        <input type="text"  class="form-control" name="courseName" placeholder="e.g. App Development" value="{{course.courseName}}">
+        <div class="text-danger">
+            {{instructor.courseNameError}}</div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/instructor/list2"><i class="fa fa-list-alt"></i> Display Data</a>
+    </div>
+</form>
